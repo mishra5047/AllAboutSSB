@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -34,9 +35,8 @@ public class FeaturesActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         sliderView = findViewById(R.id.imageSlider);
 
-        list = new ArrayList<>();
-        setViews();
         list = fetchFromDB();
+        setViews();
     }
 
     private ArrayList<SliderItem> fetchFromDB() {
@@ -47,17 +47,18 @@ public class FeaturesActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    if(dataSnapshot.exists())
-                        fetchList.add(dataSnapshot.getValue(SliderItem.class));
+
+                    SliderItem item = snapshot.getValue(SliderItem.class);
+                    fetchList.add(item);
                 }
-            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        Toast.makeText(getApplicationContext(), "list size is " + fetchList.size(), Toast.LENGTH_SHORT).show();
         return fetchList;
     }
 
