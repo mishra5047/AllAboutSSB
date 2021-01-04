@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:id="@+id/layoutItem"
+    android:layout_margin="15dp"
+    android:layout_width="wrap_content"
+    android:background="@drawable/rounded_border_black_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/text"
+        android:backgroundTint="@color/teal_700"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="What's SSB?"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold" />
+</RelativeLayout>
