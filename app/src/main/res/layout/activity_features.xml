@@ -19,7 +19,7 @@
         app:sliderIndicatorOrientation="horizontal"
         app:sliderIndicatorPadding="3dp"
         app:sliderIndicatorRadius="2dp"
-        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorSelectedColor="#08F"
         app:sliderIndicatorUnselectedColor="#FFF"
         app:sliderScrollTimeInSec="1"
         app:sliderStartAutoCycle="true" />
@@ -32,7 +32,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:src="@drawable/ic_next"
-        android:background="@color/material_blue_700"
+        android:backgroundTint="@color/blue"
         />
 
 </RelativeLayout>

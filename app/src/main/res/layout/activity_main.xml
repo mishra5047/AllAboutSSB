@@ -22,7 +22,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="30dp"
         android:src="@drawable/ic_next"
-        android:background="@color/material_blue_700"
+        android:backgroundTint="@color/blue"
 
         />
 
