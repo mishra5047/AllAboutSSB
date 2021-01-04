@@ -19,7 +19,7 @@ import java.util.List;
 
 public class SliderAdapter extends SliderViewAdapter<SliderAdapter.ViewHolder> {
     private Context context;
-    private List<SliderItem> mSliderItems = new ArrayList<>();
+    private List<SliderItem> mSliderItems;
 
     public SliderAdapter(Context context, List<SliderItem> mSliderItems) {
         this.context = context;
@@ -54,6 +54,7 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.ViewHolder> {
         });
 
         viewHolder.txtBottom.setText(item.getText());
+        viewHolder.txtInfo.setText(item.getText_info());
     }
 
     @Override
@@ -64,11 +65,13 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.ViewHolder> {
     public static class ViewHolder extends SliderViewAdapter.ViewHolder {
         ImageView image;
         TextView txtBottom;
+        TextView txtInfo;
 
         public ViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.imgBackground);
             txtBottom = itemView.findViewById(R.id.txtBottom);
+            txtInfo = itemView.findViewById(R.id.txtBottom_data);
         }
     }
 }

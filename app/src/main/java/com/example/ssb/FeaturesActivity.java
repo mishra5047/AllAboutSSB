@@ -3,6 +3,8 @@ package com.example.ssb;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +23,7 @@ import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 
-public class FeaturesActivity extends AppCompatActivity {
+public class FeaturesActivity extends Activity {
 
     FloatingActionButton fab;
     SliderView sliderView;
@@ -35,11 +37,24 @@ public class FeaturesActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         sliderView = findViewById(R.id.imageSlider);
 
-        list = fetchFromDB();
+        list = new ArrayList<>();
+        String imgLink = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9H--XGm8TAnyY-MP6RBbUJzsx1XZoNuOK1A&usqp=CAU";
+        ArrayList<String> strings = new ArrayList<>();
+                strings.add("First");
+                strings.add("Second");
+                strings.add("Third");
+                strings.add("Fourth");
+        String data = getResources().getString(R.string.lorem_ipsum);
+
+        list.add(new SliderItem(imgLink, strings.get(0), data));
+        list.add(new SliderItem(imgLink,strings.get(1), data));
+        list.add(new SliderItem(imgLink,strings.get(2), data));
+        list.add(new SliderItem(imgLink,strings.get(3), data));
         setViews();
     }
 
     private ArrayList<SliderItem> fetchFromDB() {
+
         ArrayList<SliderItem> fetchList = new ArrayList<>();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Features/");
@@ -77,7 +92,8 @@ public class FeaturesActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            //ToDo
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(intent);
             }
         });
     }
