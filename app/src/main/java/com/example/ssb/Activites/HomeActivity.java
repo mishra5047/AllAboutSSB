@@ -1,4 +1,4 @@
-package com.example.ssb;
+package com.example.ssb.Activites;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ssb.Adapters.HomeOptions.HomeOptionAdapter;
 import com.example.ssb.Adapters.HomeOptions.homeItem;
+import com.example.ssb.R;
 
 import java.util.ArrayList;
 

@@ -1,12 +1,11 @@
-package com.example.ssb;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.ssb.Activites;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.ssb.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends Activity {

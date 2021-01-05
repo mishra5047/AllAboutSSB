@@ -1,4 +1,4 @@
-package com.example.ssb;
+package com.example.ssb.Adapters.HomeSlider;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ssb.R;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SliderAdapter extends SliderViewAdapter<SliderAdapter.ViewHolder> {

@@ -1,4 +1,4 @@
-package com.example.ssb;
+package com.example.ssb.Adapters.HomeSlider;
 
 public class SliderItem {
 

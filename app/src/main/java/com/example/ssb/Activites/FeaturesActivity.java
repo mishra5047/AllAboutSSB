@@ -1,16 +1,17 @@
-package com.example.ssb;
+package com.example.ssb.Activites;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.ssb.R;
+import com.example.ssb.Adapters.HomeSlider.SliderAdapter;
+import com.example.ssb.Adapters.HomeSlider.SliderItem;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -44,6 +45,7 @@ public class FeaturesActivity extends Activity {
                 strings.add("Second");
                 strings.add("Third");
                 strings.add("Fourth");
+
         String data = getResources().getString(R.string.lorem_ipsum);
 
         list.add(new SliderItem(imgLink, strings.get(0), data));

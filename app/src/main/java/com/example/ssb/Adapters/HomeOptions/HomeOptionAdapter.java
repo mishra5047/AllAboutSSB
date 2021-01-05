@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ssb.R;
-import com.example.ssb.SliderAdapter;
 
 import java.util.ArrayList;
 
