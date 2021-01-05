@@ -54,24 +54,24 @@ public class WhatIsSSB extends Activity {
         imageBanner = findViewById(R.id.imgBanner);
         txtBottom = findViewById(R.id.txtInfo);
 
-        Picasso.get().load(item.getImgUrl()).into(new Target() {
-            @Override
-            public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                imageBanner.setBackground(new BitmapDrawable(getApplicationContext().getResources(), bitmap));
-            }
-
-            @Override
-            public void onBitmapFailed(Exception e, Drawable errorDrawable) {
-
-            }
-
-            @Override
-            public void onPrepareLoad(Drawable placeHolderDrawable) {
-
-            }
-        });
-
-        txtBottom.setText(item.getTextInfo());
+//        Picasso.get().load(item.getImgUrl()).into(new Target() {
+//            @Override
+//            public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+//                imageBanner.setBackground(new BitmapDrawable(getApplicationContext().getResources(), bitmap));
+//            }
+//
+//            @Override
+//            public void onBitmapFailed(Exception e, Drawable errorDrawable) {
+//
+//            }
+//
+//            @Override
+//            public void onPrepareLoad(Drawable placeHolderDrawable) {
+//
+//            }
+//        });
+//
+//        txtBottom.setText(item.getTextInfo());
 
         knowMoreLay.setOnClickListener(new View.OnClickListener() {
             @Override
