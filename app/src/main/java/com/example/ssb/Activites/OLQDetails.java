@@ -68,6 +68,8 @@ public class OLQDetails extends Activity {
         stackView.rewind();
         manager.setStackFrom(StackFrom.Top);
         manager.setVisibleCount(3);
-        manager.setDirections(Direction.FREEDOM);
+        manager.setDirections(Direction.HORIZONTAL);
+        manager.setMaxDegree(0.0f);
+        manager.setSwipeThreshold(0.2f);
     }
 }
