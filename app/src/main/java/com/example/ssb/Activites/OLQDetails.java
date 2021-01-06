@@ -35,6 +35,7 @@ public class OLQDetails extends Activity {
         setList();
         setStackView();
 
+        //refersh layout for the stack view
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
